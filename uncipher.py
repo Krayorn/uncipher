@@ -31,7 +31,7 @@ def getAllCaesarPossibilities(phrase):
 
         count = 0
         for word in decoded.split(' '):
-            if word.lower() in all_words:
+            if ''.join(x for x in word.lower() if x.isalpha()) in all_words:
                 count += 1
 
         list.append(Possibility(decoded, count))
